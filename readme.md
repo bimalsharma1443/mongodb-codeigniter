@@ -28,7 +28,7 @@
 
 # To run the mongodb on terminal.
 
-* **Write mongo in terminal to run mongodb**
+* **Write `mongo` in terminal to run mongodb**
 
 1. Create Database or use database.
 		use DATABASE_NAME
