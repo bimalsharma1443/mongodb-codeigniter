@@ -46,7 +46,7 @@
 
 		db.COLLECTION_NAME.update({where Condidtion},{set data})
 		db.COLLECTION_NAME.update({"key":"value"},{"KEY": "VALUE","KEY": "VALUE","KEY": "VALUE"})
-* **delete document's all detail.**
+* **delete all documents of that collection.**
 
 		db.COLLECTION_NAME.remove()
 * **delete document with serach criterial.**
@@ -56,6 +56,7 @@
 
 		db.COLLECTION_NAME.remoove({Search Criteria},1)
 * **Feach all document.** 
+		
 		db.COLLECTION_NAME.find()
 * **Feach document with where condition.** 
 
@@ -77,3 +78,11 @@
 
 		db.emp.ensureIndex({"key":1})
 		1 => 'in accending order' or -1=> 'in decending order' 
+		
+* **Drop location.**
+
+		db.COLLECTION_NAME.drop()
+		
+* **Drop Database.**
+
+		db.dropDatabase()
