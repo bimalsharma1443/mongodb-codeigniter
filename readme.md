@@ -86,3 +86,54 @@
 * **Drop Database.**
 
 		db.dropDatabase()
+		
+## Steps to Connect php to mongodb after mongodb installation and perform query.
+
+* **Create object of MongoClient**
+	
+		$m = new MongoClient();
+		
+* **Create database's refrence**
+		
+		$db = $m->my_first;
+		
+* **Create collection's refrence**
+
+		$collection = $db->mycol;
+		
+* **Insert Document Query** 
+
+		 $document = array( 
+      			"title" => "MongoDB", 
+		      "description" => "database", 
+		      "likes" => 100,
+		      "url" => "http://www.tutorialspoint.com/mongodb/",
+		      "by" =>"Bimal"
+		   );
+	
+   		$collection->insert($document);
+		
+* **Find Documents Query**
+
+		$data = $collection->find();
+		
+* **Update document query**
+	
+		$collection->update(array("title"=>"MongoDB"), array('$set'=>array("title"=>"MongoDB Tutorial")));
+		
+* **Update with Id**
+
+		$collection->update(array("_id" => new MongoId($id))
+		
+* **Remove document Query with limit 1**
+
+		$collection->remove(array("_id" => new MongoId($id)),array("justOne" => true));
+		
+* **Database Refrence**
+
+		$city_list = $collection->find();
+		$country_list = $collection->getDBRef(array('$ref' =>'country','$id' => new 	MongoId($row['country_id']),'$db' => 'master'));
+
+		
+
+		
