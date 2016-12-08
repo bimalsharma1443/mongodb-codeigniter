@@ -87,7 +87,7 @@
 
 		db.dropDatabase()
 		
-## Steps to Connect php to mongodb after mongodb installation and perform query.
+# Steps to Connect php to mongodb after mongodb installation and perform query.
 
 * **Create object of MongoClient**
 	
